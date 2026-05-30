@@ -1,0 +1,35 @@
+services:
+  api:
+    platform: linux/arm64
+    build:
+      context: ./az-postgresql-api
+      dockerfile: Dockerfile
+
+    ports:
+      - "8080:8080"
+
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+
+      ConnectionStrings__DefaultConnection: Host=postgresdb;Port=5432;Database=postgresdb;Username=postgres;Password=postgres123
+
+    depends_on:
+      - postgresdb
+
+  postgresdb:
+    image: postgres:16
+    platform: linux/arm64
+    container_name: postgresdb
+    restart: always
+    environment:
+      POSTGRES_DB: postgresdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
