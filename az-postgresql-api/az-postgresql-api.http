@@ -1,0 +1,6 @@
+@az_postgresql_api_HostAddress = http://localhost:5004
+
+GET {{az_postgresql_api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
