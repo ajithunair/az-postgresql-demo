@@ -1,0 +1,17 @@
+services:
+  postgresdb:
+    image: postgres:16
+    platform: linux/arm64/v8
+    container_name: postgresdb
+    restart: always
+    environment:
+      POSTGRES_DB: postgresdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
