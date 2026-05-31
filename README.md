@@ -1,5 +1,20 @@
 # Azure PostgreSQL API
 
+![.NET 8](https://img.shields.io/badge/.NET_8-512BD4?logo=.net&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-0078D4?logo=microsoftazure&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+![Azure DevOps](https://img.shields.io/badge/Azure_DevOps-0078D7?logo=azuredevops&logoColor=white)
+![Azure Key Vault](https://img.shields.io/badge/Azure_Key_Vault-0078D4?logo=microsoftazure&logoColor=white)
+
+[![Live API](https://img.shields.io/badge/Live_API-Azure-success)](https://aca-postgresql-api.azurewebsites.net/swagger/index.html)
+
+Production-ready ASP.NET Core 8 Web API with PostgreSQL, Docker, Azure App Service, Azure Key Vault, Azure DevOps CI/CD, Identity, and JWT Authentication.
+
+---
+
+# Azure PostgreSQL API
+
 A production-style ASP.NET Core 8 Web API demonstrating modern cloud-native development practices using Azure, PostgreSQL, Docker, Identity, JWT Authentication, CI/CD, and Azure Key Vault.
 
 ## Overview
