@@ -71,6 +71,8 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.MapGet("/", () => "API is running");
+
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
@@ -85,7 +87,5 @@ using (var scope = app.Services.CreateScope())
         await db.Database.EnsureCreatedAsync();
     }
 }
-
-app.MapGet("/", () => "API is running");
 
 app.Run();
