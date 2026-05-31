@@ -71,7 +71,12 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapGet("/", () => "API is running");
+app.MapGet("/", () => new
+{
+    Message = "API is running in Azure",
+    Environment = app.Environment.EnvironmentName,
+    Timestamp = DateTime.UtcNow
+});
 
 using (var scope = app.Services.CreateScope())
 {
