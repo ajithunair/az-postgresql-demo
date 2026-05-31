@@ -1,0 +1,15 @@
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: AzureWebAppContainer@1
+    inputs:
+      azureSubscription: 'DevHopes subscription 1(f567daeb-4056-435c-884e-b42a1b9bb636)'
+      appName: 'aca-postgresql-api'
+      deployToSlotOrASE: true
+      resourceGroupName: 'rg-az-postgresql'
+      slotName: 'production'
+      containers: 'acrazpostgresql.azurecr.io/azpostgresqldemo:latest'
